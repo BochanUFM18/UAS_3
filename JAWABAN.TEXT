@@ -1,1 +1,14 @@
 2. tidak ada 
+3. interface konek {
+    public function konek();
+}
+// class baru koneksi dan ada menggunakan impelemnts dari interface konek
+class koneksi implements konek{
+    private $koneksi; 
+    public function __construct($koneksi){
+    $this->koneksi = $koneksi;
+    }
+    public function konek(){
+        $koneksi = mysqli_connect ("localhost","root","","parawisata");
+    }
+}
