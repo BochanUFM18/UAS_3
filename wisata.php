@@ -24,6 +24,20 @@ class Wisata {
 
 // Kelas Renderer untuk Tempat Wisata
 
+interface konek {
+    public function konek();
+}
+class koneksi implements konek{
+    private $koneksi;
+    public function __construct($koneksi){
+    $this->koneksi = $koneksi;
+    }
+    public function konek(){
+        $koneksi = mysqli_connect ("localhost","root","","parawisata");
+    }
+}
+
+
 class MesinPencarianTabel extends Wisata {
     private $koneksi; //Encapsulasi Hanya Biasa Diakses Oleh Class MesinPencarianTabel
     private $namaTabel; //Encapsulasi
