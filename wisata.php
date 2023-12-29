@@ -30,7 +30,7 @@ interface konek {
 }
 // class baru koneksi dan ada menggunakan impelemnts dari interface konek
 class koneksi implements konek{
-    private $koneksi;
+    private $koneksi; 
     public function __construct($koneksi){
     $this->koneksi = $koneksi;
     }
