@@ -24,9 +24,11 @@ class Wisata {
 
 // Kelas Renderer untuk Tempat Wisata
 
+// saya membuat sebuah polimofisme nya yaitu interface untuk mengizinkan method yang akan di gunakan pada class
 interface konek {
     public function konek();
 }
+// class baru koneksi dan ada menggunakan impelemnts dari interface konek
 class koneksi implements konek{
     private $koneksi;
     public function __construct($koneksi){
